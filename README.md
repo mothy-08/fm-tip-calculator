@@ -1,5 +1,5 @@
-# Frontend Mentor - Tip calculator app solution
+# Tip Calculator
 
 ![Screenshot of the site](./screenshot.png)
 
-A tip calculator app, built on <strong>HTML, CSS, and JS</strong>, that serves as the solution to the [Tip calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX).
+This is my solution to the [Frontend Mentor Tip Calculator Challenge](https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX). Built on **HTML, CSS, and JS**.

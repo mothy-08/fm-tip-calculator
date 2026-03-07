@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
 
     <link
       rel="icon"
@@ -12,7 +11,7 @@
       href="./images/favicon-32x32.png"
     />
 
-    <title>Frontend Mentor | Tip calculator app</title>
+    <title>Tip Calculator</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -63,42 +62,39 @@
               </div>
             </div>
 
-            <fieldset>
-              <label>
-                <input name="tip-rate" type="radio" value="5" />
-                <span>5%</span>
-              </label>
-              <label>
-                <input name="tip-rate" type="radio" value="10" />
-                <span>10%</span>
-              </label>
-              <label>
-                <input name="tip-rate" type="radio" value="15" />
-                <span>15%</span>
-              </label>
-              <label>
-                <input name="tip-rate" type="radio" value="20" />
-                <span>20%</span>
-              </label>
-              <label>
-                <input name="tip-rate" type="radio" value="25" />
-                <span>25%</span>
-              </label>
-              <label>
-                <input name="tip-rate" type="radio" value="50" />
-                <span>50%</span>
-              </label>
-              <label>
-                <input name="tip-rate" type="radio" value="custom" />
-                <span>
+            <fieldset class="tip-rates-list">
+              <legend>Select Tip %</legend>
+              <div class="tip-rates-wrapper">
+                <label>
+                  <input name="tip-rate" type="radio" value="5" />
+                  <span>5%</span>
+                </label>
+                <label>
+                  <input name="tip-rate" type="radio" value="10" />
+                  <span>10%</span>
+                </label>
+                <label>
+                  <input name="tip-rate" type="radio" value="15" />
+                  <span>15%</span>
+                </label>
+                <label>
+                  <input name="tip-rate" type="radio" value="25" />
+                  <span>25%</span>
+                </label>
+                <label>
+                  <input name="tip-rate" type="radio" value="50" />
+                  <span>50%</span>
+                </label>
+                <label>
+                  <input name="tip-rate" type="radio" value="custom" />
                   <input
                     type="text"
                     id="custom-tip"
                     inputmode="decimal"
                     placeholder="Custom"
                   />
-                </span>
-              </label>
+                </label>
+              </div>
             </fieldset>
 
             <div class="input-wrapper">
@@ -126,20 +122,20 @@
           <!-- output -->
           <div class="tip-output-wrapper">
             <div class="tip-calculation">
-              <div>
+              <div class="text">
                 <span>Tip Amount</span>
                 <span class="per-person">/ person</span>
               </div>
               <data id="tip-per-person" value="$0">$0.00</data>
             </div>
             <div class="tip-calculation">
-              <div>
+              <div class="text">
                 <span>Total</span>
                 <span class="per-person">/ person</span>
               </div>
               <data id="total-per-person" value="$0">$0.00</data>
             </div>
-            <button type="button">Reset</button>
+            <button id="reset-button" type="button">Reset</button>
           </div>
         </article>
       </section>
