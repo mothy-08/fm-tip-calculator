@@ -1,0 +1,91 @@
+:root {
+  --color-green-400: hsl(172, 67%, 45%);
+
+  --color-grey-50: hsl(189, 47%, 97%);
+  --color-grey-200: hsl(185, 41%, 84%);
+  --color-grey-400: hsl(184, 14%, 56%);
+  --color-grey-500: hsl(186, 14%, 43%);
+  --color-green-900: hsl(183, 100%, 15%);
+
+  --color-white: hsl(0, 100%, 100%);
+
+  --size-16: 1rem;
+  --size-24: 1.5rem;
+  --size-32: 2rem;
+
+  --font-regular: 400;
+  --font-bold: 700;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+  background: transparent;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+body {
+  min-height: 100svh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: "Space Mono", monospace;
+  font-weight: var(--font-regular);
+  font-style: normal;
+  font-size: var(--size-16);
+
+  background-color: var(--color-grey-200);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+article {
+  display: grid;
+  grid-template-areas:
+    "calculator"
+    "output";
+  gap: var(--size-32);
+}

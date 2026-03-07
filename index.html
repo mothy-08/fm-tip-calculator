@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <section aria-labelledby="main-heading">
+        <h1 id="main-heading" class="sr-only">Splitter</h1>
+        <img
+          src="images/logo.svg"
+          alt="The logo of the site is 'Splitter'"
+          aria-hidden="true"
+          width="87"
+          height="54"
+        />
+
+        <!-- grid area -->
+        <article>
+          <!-- calculator -->
+          <form id="calculator-form" novalidate>
+            <div class="input-wrapper">
+              <label for="bill">Bill</label>
+              <!-- for icon -->
+              <div class="icon-wrapper">
+                <img
+                  src="images/icon-dollar.svg"
+                  alt=""
+                  aria-hidden="true"
+                  width="11"
+                  height="17"
+                />
+                <input
+                  id="bill"
+                  name="bill"
+                  type="text"
+                  placeholder="0"
+                  inputmode="decimal"
+                  pattern="\d+(\.\d+)?"
+                />
+              </div>
+            </div>
+
+            <fieldset>
+              <label>
+                <input name="tip-rate" type="radio" value="5" />
+                <span>5%</span>
+              </label>
+              <label>
+                <input name="tip-rate" type="radio" value="10" />
+                <span>10%</span>
+              </label>
+              <label>
+                <input name="tip-rate" type="radio" value="15" />
+                <span>15%</span>
+              </label>
+              <label>
+                <input name="tip-rate" type="radio" value="20" />
+                <span>20%</span>
+              </label>
+              <label>
+                <input name="tip-rate" type="radio" value="25" />
+                <span>25%</span>
+              </label>
+              <label>
+                <input name="tip-rate" type="radio" value="50" />
+                <span>50%</span>
+              </label>
+              <label>
+                <input name="tip-rate" type="radio" value="custom" />
+                <span>
+                  <input
+                    type="text"
+                    id="custom-tip"
+                    inputmode="decimal"
+                    placeholder="Custom"
+                  />
+                </span>
+              </label>
+            </fieldset>
+
+            <div class="input-wrapper">
+              <label for="number-of-people">Number of people</label>
+              <div class="icon-wrapper">
+                <img
+                  src="images/icon-person.svg"
+                  alt=""
+                  aria-hidden="true"
+                  width="13"
+                  height="16"
+                />
+                <input
+                  id="number-of-people"
+                  name="number-of-people"
+                  type="text"
+                  inputmode="numeric"
+                  pattern="[1-9]\d*"
+                  placeholder="0"
+                />
+              </div>
+            </div>
+          </form>
+
+          <!-- output -->
+          <div class="tip-output-wrapper">
+            <div class="tip-calculation">
+              <div>
+                <span>Tip Amount</span>
+                <span class="per-person">/ person</span>
+              </div>
+              <data id="tip-per-person" value="$0">$0.00</data>
+            </div>
+            <div class="tip-calculation">
+              <div>
+                <span>Total</span>
+                <span class="per-person">/ person</span>
+              </div>
+              <data id="total-per-person" value="$0">$0.00</data>
+            </div>
+            <button type="button">Reset</button>
+          </div>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
