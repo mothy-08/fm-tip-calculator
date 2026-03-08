@@ -98,6 +98,7 @@ article {
 }
 
 #calculator-form > * + * {
+  grid-area: calculator;
   margin-top: 36px;
 }
 
@@ -130,6 +131,9 @@ article {
   text-align: right;
   border-radius: 4px;
   background-color: var(--color-grey-50);
+  color: var(--color-green-900);
+  font-weight: var(--font-bold);
+  font-size: var(--size-24);
 }
 
 .icon-wrapper input:focus-visible {
@@ -146,6 +150,11 @@ article {
   padding-inline: 0;
   margin-inline: 0;
   margin-block: 0;
+}
+
+legend {
+  margin-block-end: 8px;
+  color: var(--color-grey-500);
 }
 
 .tip-rates-wrapper {
@@ -198,6 +207,7 @@ article {
 }
 
 .tip-output-wrapper {
+  grid-area: output;
   background-color: var(--color-green-900);
   border-radius: 8px;
   padding: 24px;
@@ -205,7 +215,13 @@ article {
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.tip-calculation-wrapper {
+  display: flex;
+  flex-direction: column;
   gap: 16px;
 }
 
@@ -236,6 +252,21 @@ article {
   border-radius: 4px;
   padding: 16px;
   background-color: var(--color-green-400);
+  color: var(--color-green-900);
   text-transform: uppercase;
   font-weight: var(--font-bold);
+}
+
+@media (min-width: 64rem) {
+  article {
+    grid-template-areas: "calculator output";
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 57.5rem;
+  }
+  .tip-rates-wrapper {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .tip-calculation data {
+    font-size: var(--size-48);
+  }
 }
