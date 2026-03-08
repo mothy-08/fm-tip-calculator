@@ -86,5 +86,9 @@ document.querySelectorAll('input[name="tip-rate"]').forEach((radio) => {
 });
 
 resetButton.addEventListener("click", () => {
+  tipPerPersonEl.textContent = "$0.00";
+  totalPerPersonEl.textContent = "$0.00";
+  tipPerPersonEl.value = 0;
+  totalPerPersonEl.value = 0;
   calculatorForm.reset();
 });

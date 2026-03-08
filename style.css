@@ -6,12 +6,10 @@
   --color-grey-500: hsl(186, 14%, 43%);
   --color-green-900: hsl(183, 100%, 15%);
   --color-white: hsl(0, 100%, 100%);
-
   --size-16: 1rem;
   --size-24: 1.5rem;
   --size-32: 2rem;
   --size-48: 3rem;
-
   --font-regular: 400;
   --font-bold: 700;
 }
@@ -25,8 +23,7 @@
   font: inherit;
 }
 
-img,
-svg {
+img {
   display: block;
   max-width: 100%;
 }
@@ -59,16 +56,13 @@ input {
 
 body {
   min-height: 100svh;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   font-family: "Space Mono", monospace;
   font-weight: var(--font-regular);
   font-style: normal;
   font-size: var(--size-16);
-
   background-color: var(--color-grey-200);
 }
 
